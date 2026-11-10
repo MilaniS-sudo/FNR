@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <LinearLayout android:id="@+id/setupGroup" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+            <LinearLayout android:id="@+id/noSubjects" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@color/fnr_secondary_container" android:orientation="vertical" android:padding="12dp"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="You need a subject before you can record." />
+                <com.google.android.material.button.MaterialButton android:id="@+id/addSubject"
+                    style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Add a subject" />
+            </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/subjectLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="Subject">
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView android:id="@+id/subjectInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/titleLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="Session title (optional)">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/titleInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textCapSentences" android:maxLength="80" />
+        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView android:id="@+id/timer" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:gravity="center" android:text="0:00"
+            android:textAppearance="@style/TextAppearance.Material3.DisplayMedium" />
+        <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/level"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:max="100" app:trackThickness="8dp" android:contentDescription="Microphone level" />
+        <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:gravity="center" android:textAppearance="@style/FNR.Body" />
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/start"
+            android:layout_width="match_parent" android:layout_height="64dp" android:layout_marginTop="16dp"
+            android:text="Start recording" app:icon="@drawable/ic_mic" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton android:id="@+id/pause"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_height="64dp" android:layout_weight="1"
+                android:layout_marginEnd="8dp" android:text="Pause" app:icon="@drawable/ic_pause" android:visibility="gone" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/stop"
+                android:layout_width="0dp" android:layout_height="64dp" android:layout_weight="1"
+                android:text="Stop and save" app:icon="@drawable/ic_stop" android:visibility="gone" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView android:id="@+id/resultCard"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="12dp">
+                <com.google.android.material.button.MaterialButton android:id="@+id/generate"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Generate flash notes" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/recordAgain"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Record another session" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/upload"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:text="Or upload an existing audio file" app:icon="@drawable/ic_upload" />
+    </LinearLayout>
+</ScrollView>

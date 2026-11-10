@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Create your account" android:textAppearance="@style/FNR.Title" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            android:text="All fields are required." android:textAppearance="@style/FNR.Caption" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/firstLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox" 
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="First name">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/firstInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPersonName|textCapWords" android:maxLength="50" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/lastLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox" 
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="Last name">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/lastInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPersonName|textCapWords" android:maxLength="50" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/emailLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox" 
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="Email">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/emailInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" android:maxLength="100" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/passwordLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox" app:endIconMode="password_toggle" app:helperText="8+ characters with an upper case letter, a number and a symbol"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="Password">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/passwordInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPassword" android:maxLength="64" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/confirmLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox" app:endIconMode="password_toggle"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="Confirm password">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/confirmInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPassword" android:maxLength="64" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/registerButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:text="Register" />
+        <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/progress"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:indeterminate="true"
+            android:visibility="gone" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/loginLink"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Already registered? Log in" />
+    </LinearLayout>
+</ScrollView>

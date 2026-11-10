@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="What will you use FNR for?" android:textAppearance="@style/FNR.Title" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp"
+            android:text="We will set up a first subject to match. You can add more later."
+            android:textAppearance="@style/FNR.Body" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/studying"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="72dp"
+            android:text="Studying\nExplain lecture and textbook material out loud" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/research"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="72dp" android:layout_marginTop="12dp"
+            android:text="Research\nCapture ideas from articles and papers" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/revision"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="72dp" android:layout_marginTop="12dp"
+            android:text="Revision\nPrepare for tests and exams" />
+    </LinearLayout>
+</ScrollView>

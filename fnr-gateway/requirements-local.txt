@@ -1,0 +1,5 @@
+# Free, offline speech-to-text on your own machine (FNR_STT=local).
+# The first request downloads the Whisper model (about 140 MB for "base").
+faster-whisper>=1.1,<2.0
+# PyAV 19+ breaks faster-whisper 1.2 audio decoding; keep it below 18.
+av>=12,<18

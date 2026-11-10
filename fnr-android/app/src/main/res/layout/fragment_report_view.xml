@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/FNR.Title" />
+        <TextView android:id="@+id/description" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/FNR.Caption" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/dates"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/subjectLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="Subject">
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView android:id="@+id/subjectInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/progress"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:indeterminate="true" android:visibility="gone" />
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <TextView android:id="@+id/summary" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp" android:padding="12dp" android:textAppearance="@style/FNR.Body" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:id="@+id/chartTitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:textAppearance="@style/FNR.Section" />
+        <za.ac.richfield.fnr.ui.reports.BarChartView android:id="@+id/chart"
+            android:layout_width="match_parent" android:layout_height="180dp" android:layout_marginTop="8dp" />
+
+        <TextView android:id="@+id/empty" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:gravity="center" android:visibility="gone"
+            android:text="No data for this period. Try a longer date range." />
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <TableLayout android:id="@+id/table" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/export"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:text="Export to PDF" app:icon="@drawable/ic_pdf" />
+    </LinearLayout>
+</ScrollView>

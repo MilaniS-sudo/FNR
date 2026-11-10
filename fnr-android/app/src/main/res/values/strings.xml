@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Flash Note Recorder</string>
+    <!-- Short name shown under the icon on the home screen -->
+    <string name="launcher_name">FNR</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_record">Record</string>
+    <string name="tab_library">Library</string>
+    <string name="tab_reports">Reports</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Administrator's read-only Database Viewer: tables, their structure and the newest records. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Database" android:textAppearance="@style/FNR.Title" />
+        <TextView android:id="@+id/summary" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:textAppearance="@style/FNR.Body" />
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:scrollbars="none">
+            <com.google.android.material.chip.ChipGroup android:id="@+id/chips"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:singleLine="true" app:singleSelection="true" app:selectionRequired="true" />
+        </HorizontalScrollView>
+        <TextView android:id="@+id/structure" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:padding="12dp" android:background="@color/fnr_primary_container"
+            android:textColor="@color/fnr_on_primary_container" android:textSize="13sp" android:fontFamily="monospace" />
+        <TextView android:id="@+id/info" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:textAppearance="@style/FNR.Body" />
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+            <TableLayout android:id="@+id/table" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:stretchColumns="*" />
+        </HorizontalScrollView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

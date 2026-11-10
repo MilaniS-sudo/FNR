@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Item ids equal destination ids, so the bar navigates without extra code. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/dashboardFragment" android:icon="@drawable/ic_home" android:title="@string/tab_home" />
+    <item android:id="@id/recordFragment" android:icon="@drawable/ic_mic" android:title="@string/tab_record" />
+    <item android:id="@id/subjectsFragment" android:icon="@drawable/ic_library" android:title="@string/tab_library" />
+    <item android:id="@id/reportsMenuFragment" android:icon="@drawable/ic_reports" android:title="@string/tab_reports" />
+</menu>

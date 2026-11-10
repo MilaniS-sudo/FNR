@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:id="@+id/name" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/FNR.Title" />
+        <TextView android:id="@+id/email" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/FNR.Body" />
+        <TextView android:id="@+id/role" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/FNR.Caption" />
+        <TextView android:id="@+id/storage" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:textAppearance="@style/FNR.Caption" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:text="Your name" android:textAppearance="@style/FNR.Section" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/firstLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox" 
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="First name">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/firstInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPersonName|textCapWords" android:maxLength="50" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/lastLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox" 
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="Last name">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/lastInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPersonName|textCapWords" android:maxLength="50" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/saveNames" style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:text="Save name" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:text="Change password" android:textAppearance="@style/FNR.Section" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/oldLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox" app:endIconMode="password_toggle"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="Current password">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/oldInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPassword" android:maxLength="64" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/newLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox" app:endIconMode="password_toggle"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="New password">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/newInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPassword" android:maxLength="64" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/confirmLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox" app:endIconMode="password_toggle"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="Confirm new password">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/confirmInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPassword" android:maxLength="64" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/changePassword" style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:text="Change password" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:text="AI Gateway" android:textAppearance="@style/FNR.Section" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="The address of the computer running the FNR Gateway, for example http://192.168.1.50:8000/"
+            android:textAppearance="@style/FNR.Caption" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/gatewayLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox" 
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="Gateway address">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/gatewayInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textUri" android:maxLength="200" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton android:id="@+id/testGateway"
+                style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="8dp"
+                android:text="Test connection" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/saveGateway"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Save" />
+        </LinearLayout>
+        <TextView android:id="@+id/gatewayStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/FNR.Caption" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/logout"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:text="Log out" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,10 @@
+# Copy the two FNR_ lines into local.properties (Android Studio creates that file
+# with sdk.dir already in it). local.properties is never shared or handed in.
+
+# Android emulator reaching a Gateway on the same Mac:
+FNR_GATEWAY_URL=http://10.0.2.2:8000/
+# Real phone on the same Wi-Fi as your Mac (replace with your Mac's IP address):
+# FNR_GATEWAY_URL=http://192.168.1.50:8000/
+
+# Must match FNR_APP_TOKEN in fnr-gateway/.env
+FNR_APP_TOKEN=change-me-demo-token

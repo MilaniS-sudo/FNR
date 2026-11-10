@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Backups are encrypted with your account password (AES-256). Without the password nobody can open them, so keep it safe."
+            android:textAppearance="@style/FNR.Body" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/passwordLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox" app:endIconMode="password_toggle"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:hint="Account password">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/passwordInput"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPassword" android:maxLength="64" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/progress"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:indeterminate="true" android:visibility="gone" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:text="Manual backup" android:textAppearance="@style/FNR.Section" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/backupNow"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:text="Back up now" app:icon="@drawable/ic_backup" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/restore" style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:text="Restore from a backup file" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:text="Automatic backup" android:textAppearance="@style/FNR.Section" />
+        <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/autoSwitch"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Back up every week" />
+        <TextView android:id="@+id/autoInfo" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/FNR.Caption" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/runAuto" style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:text="Run automatic backup now" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/restoreAuto" style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:text="Restore latest automatic backup" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:text="Backup history" android:textAppearance="@style/FNR.Section" />
+        <TextView android:id="@+id/noHistory" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="No backups yet." android:textAppearance="@style/FNR.Caption" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/history" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:nestedScrollingEnabled="false" />
+    </LinearLayout>
+</ScrollView>

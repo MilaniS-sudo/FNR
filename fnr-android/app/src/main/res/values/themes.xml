@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FNR" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/fnr_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/fnr_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/fnr_on_primary_container</item>
+        <item name="colorSecondary">@color/fnr_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/fnr_secondary_container</item>
+        <item name="colorError">@color/fnr_error</item>
+        <item name="android:statusBarColor">@color/fnr_primary</item>
+    </style>
+
+    <!-- Overflow menu: light card with dark text. Without this the dark toolbar
+         overlay made the menu text white on a light background (unreadable). -->
+    <style name="ThemeOverlay.FNR.Popup" parent="ThemeOverlay.Material3.Light">
+        <item name="colorSurface">@color/white</item>
+        <item name="android:textColorPrimary">@color/fnr_on_primary_container</item>
+        <item name="android:textColor">@color/fnr_on_primary_container</item>
+        <item name="popupMenuStyle">@style/FNR.PopupMenu</item>
+    </style>
+    <style name="FNR.PopupMenu" parent="Widget.Material3.PopupMenu.Overflow">
+        <item name="android:popupBackground">@drawable/bg_popup</item>
+        <item name="android:popupElevation">8dp</item>
+    </style>
+
+    <style name="FNR.Title" parent="TextAppearance.Material3.HeadlineSmall" />
+    <style name="FNR.Section" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="FNR.Body" parent="TextAppearance.Material3.BodyMedium" />
+    <style name="FNR.Caption" parent="TextAppearance.Material3.BodySmall" />
+</resources>

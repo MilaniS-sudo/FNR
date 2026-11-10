@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginStart="12dp" android:layout_marginEnd="12dp" android:layout_marginTop="8dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="12dp">
+        <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/FNR.Section" />
+        <TextView android:id="@+id/meta" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/FNR.Caption" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:id="@+id/status" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:textColor="?attr/colorPrimary" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/process"
+                style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Generate notes" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/delete"
+                style="@style/Widget.Material3.Button.IconButton" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:contentDescription="Delete recording"
+                app:icon="@drawable/ic_delete" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

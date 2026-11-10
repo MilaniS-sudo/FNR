@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Every screen in FNR and the data each one needs. This file is the "Form Links" map
+     from Phase 4, section 4.7.1: Android Studio's Design tab draws it as a diagram. -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <!-- M1 User and Security -->
+    <fragment android:id="@+id/splashFragment" android:name="za.ac.richfield.fnr.ui.auth.SplashFragment"
+        android:label="@string/app_name" />
+    <fragment android:id="@+id/loginFragment" android:name="za.ac.richfield.fnr.ui.auth.LoginFragment"
+        android:label="Log in" />
+    <fragment android:id="@+id/registerFragment" android:name="za.ac.richfield.fnr.ui.auth.RegisterFragment"
+        android:label="Create account" />
+    <fragment android:id="@+id/purposeFragment" android:name="za.ac.richfield.fnr.ui.auth.PurposeFragment"
+        android:label="Welcome" />
+    <fragment android:id="@+id/profileFragment" android:name="za.ac.richfield.fnr.ui.profile.ProfileFragment"
+        android:label="Profile" />
+
+    <!-- Student home -->
+    <fragment android:id="@+id/dashboardFragment" android:name="za.ac.richfield.fnr.ui.home.DashboardFragment"
+        android:label="Home" />
+
+    <!-- M2 Recording and Upload, M3 AI Processing -->
+    <fragment android:id="@+id/recordFragment" android:name="za.ac.richfield.fnr.ui.record.RecordFragment"
+        android:label="Record" />
+    <fragment android:id="@+id/uploadFragment" android:name="za.ac.richfield.fnr.ui.record.UploadFragment"
+        android:label="Upload audio" />
+    <fragment android:id="@+id/recordingsFragment" android:name="za.ac.richfield.fnr.ui.record.RecordingsFragment"
+        android:label="Recordings" />
+    <fragment android:id="@+id/processingFragment" android:name="za.ac.richfield.fnr.ui.record.ProcessingFragment"
+        android:label="Processing">
+        <argument android:name="recordingId" app:argType="long" />
+    </fragment>
+
+    <!-- M4 Flash Note Library and Playback -->
+    <fragment android:id="@+id/subjectsFragment" android:name="za.ac.richfield.fnr.ui.library.SubjectsFragment"
+        android:label="Library" />
+    <fragment android:id="@+id/notesFragment" android:name="za.ac.richfield.fnr.ui.library.NotesFragment"
+        android:label="Flash notes">
+        <argument android:name="subjectId" app:argType="long" android:defaultValue="-1L" />
+        <argument android:name="subjectName" app:argType="string" android:defaultValue="All subjects" />
+    </fragment>
+    <fragment android:id="@+id/playerFragment" android:name="za.ac.richfield.fnr.ui.library.PlayerFragment"
+        android:label="Flash note">
+        <argument android:name="flashNoteId" app:argType="long" />
+    </fragment>
+    <fragment android:id="@+id/editNoteFragment" android:name="za.ac.richfield.fnr.ui.library.EditNoteFragment"
+        android:label="Edit flash note">
+        <argument android:name="flashNoteId" app:argType="long" />
+    </fragment>
+
+    <!-- M5 Reports -->
+    <fragment android:id="@+id/reportsMenuFragment" android:name="za.ac.richfield.fnr.ui.reports.ReportsMenuFragment"
+        android:label="Reports" />
+    <fragment android:id="@+id/reportViewFragment" android:name="za.ac.richfield.fnr.ui.reports.ReportViewFragment"
+        android:label="Report">
+        <argument android:name="reportType" app:argType="string" />
+    </fragment>
+
+    <!-- M6 Backup and Administration -->
+    <fragment android:id="@+id/backupFragment" android:name="za.ac.richfield.fnr.ui.backup.BackupFragment"
+        android:label="Backup and restore" />
+    <fragment android:id="@+id/adminDashboardFragment" android:name="za.ac.richfield.fnr.ui.admin.AdminDashboardFragment"
+        android:label="Administrator" />
+    <fragment android:id="@+id/usersFragment" android:name="za.ac.richfield.fnr.ui.admin.UsersFragment"
+        android:label="User accounts" />
+    <fragment android:id="@+id/databaseFragment" android:name="za.ac.richfield.fnr.ui.admin.DatabaseFragment"
+        android:label="Database viewer" />
+</navigation>

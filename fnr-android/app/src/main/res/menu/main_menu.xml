@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Icons are shown in the overflow menu (MainActivity); grouped so Log out sits apart -->
+    <group android:id="@+id/groupMain">
+        <item android:id="@+id/menuRecordings" android:title="Recordings" android:icon="@drawable/ic_mic"
+            app:iconTint="@color/fnr_primary" app:showAsAction="never" />
+        <item android:id="@+id/menuBackup" android:title="Backup and restore" android:icon="@drawable/ic_backup"
+            app:iconTint="@color/fnr_primary" app:showAsAction="never" />
+        <item android:id="@+id/menuProfile" android:title="Profile" android:icon="@drawable/ic_person"
+            app:iconTint="@color/fnr_primary" app:showAsAction="never" />
+        <item android:id="@+id/menuAdmin" android:title="Administrator" android:icon="@drawable/ic_people"
+            app:iconTint="@color/fnr_primary" app:showAsAction="never" />
+    </group>
+    <group android:id="@+id/groupSession">
+        <item android:id="@+id/menuLogout" android:title="Log out" android:icon="@drawable/ic_logout"
+            app:iconTint="@color/fnr_error" app:showAsAction="never" />
+    </group>
+</menu>

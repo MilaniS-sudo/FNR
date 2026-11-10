@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/FNR.Title" />
+        <TextView android:id="@+id/meta" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" android:textAppearance="@style/FNR.Caption" />
+        <TextView android:id="@+id/step1" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="6dp" android:paddingBottom="6dp" android:textAppearance="@style/FNR.Body" />
+        <TextView android:id="@+id/step2" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="6dp" android:paddingBottom="6dp" android:textAppearance="@style/FNR.Body" />
+        <TextView android:id="@+id/step3" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="6dp" android:paddingBottom="6dp" android:textAppearance="@style/FNR.Body" />
+        <TextView android:id="@+id/step4" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="6dp" android:paddingBottom="6dp" android:textAppearance="@style/FNR.Body" />
+        <TextView android:id="@+id/step5" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="6dp" android:paddingBottom="6dp" android:textAppearance="@style/FNR.Body" />
+        <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/progress"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp"
+            android:indeterminate="true" android:visibility="gone" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:text="You can leave this screen; processing continues in the background and you will get a notification."
+            android:textAppearance="@style/FNR.Caption" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/process"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:text="Generate flash notes" android:visibility="gone" />
+
+        <com.google.android.material.card.MaterialCardView android:id="@+id/errorCard"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:visibility="gone" app:strokeColor="@color/fnr_error">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="12dp">
+                <TextView android:id="@+id/error" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/fnr_error" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Your recording is still saved." android:textAppearance="@style/FNR.Caption" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/retry"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView android:id="@+id/doneCard"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="12dp">
+                <TextView android:id="@+id/doneText" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/viewNotes"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="View flash notes" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
